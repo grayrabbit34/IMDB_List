@@ -37,18 +37,24 @@ class Program
                 {
                     wishToProceed = false; // ana döngü koşulu false değeri alır ve döngüden çıkılır
 
+                    Console.WriteLine("Girilen tüm filmler: ");
                     foreach (var item in movies)
                         //girilen tüm filmler ekrana yazdırılır
                         Console.WriteLine($"Filmin adı: {item.Name} filmin IMDB puanı: {item.ImdbScore}");
 
+                    Console.WriteLine("IMDB puanı 4-9 arasında olan filmler: ");
                     foreach (var item in movies)
                         //imdb puanı 4-9 arasındaki filmler ekrana yazdırılır
+
                         if (item.ImdbScore >= 4 && item.ImdbScore <= 9)
+
                             Console.WriteLine($"Filmin adı: {item.Name} filmin IMDB puanı: {item.ImdbScore}");
 
+                    Console.WriteLine("İsmi 'A' ile başlayan filmler: ");
                     foreach (var item in movies)
                     {
                         //ismi a ile başlayan filmler ekrana yazdırılır.
+
                         if (item.Name[0] == 'A' || item.Name[0] == 'a') //char olduğu için tek tırnak ile yazdım.
                         {
                             Console.WriteLine($"Filmin adı: {item.Name} filmin IMDB puanı: {item.ImdbScore}");
